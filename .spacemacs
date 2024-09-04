@@ -240,11 +240,11 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(zen-and-art
-   			 spacemacs-dark
+                         spacemacs-dark
                          spacemacs-light
-			 ample-flat
-			 solarized-wombat-dark
-			 reverse)
+                         ample-flat
+                         solarized-wombat-dark
+                         reverse)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
@@ -264,17 +264,42 @@ It should only modify the values of Spacemacs settings."
    ;; fixed-pitch faces. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
+
    dotspacemacs-default-font '("Source Code Pro"
                                :size 10.0
                                :weight normal
                                :width normal)
 
+
+   ;; TODO mettre en dur:
+   ;;         Family: Bitstream Vera Sans Mono
+   ;;          Foundry: Bits
+   ;;            Width: normal
+   ;;           Height: 111
+   ;;           Weight: regular
+   ;;            Slant: normal
+   ;;       Foreground: #d2dec4
+   ;;DistantForeground: unspecified
+   ;;       Background: #191717
+   ;;        Underline: nil
+   ;;         Overline: nil
+   ;;   Strike-through: nil
+   ;;              Box: nil
+   ;;          Inverse: nil
+   ;;          Stipple: nil
+   ;;             Font: #<font-object -Bits-Bitstream Vera Sans Mono-regular-normal-normal-*-14-*-*-*-m-0-iso10646-1>
+   ;;          Fontset: -Bits-Bitstream Vera Sans Mono-regular-normal-normal-*-14-*-*-*-m-0-fontset-startup
+   ;;           Extend: nil
+   ;;          Inherit: nil
+   ;;
+
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
 
+   ;; TODO garder double space pour projectile-run-last-command
    ;; The key used for Emacs commands `M-x' (after pressing on the leader key).
    ;; (default "SPC")
-   dotspacemacs-emacs-command-key "SPC"
+   dotspacemacs-emacs-command-key "<f1>"
 
    ;; The key used for Vim Ex commands (default ":")
    dotspacemacs-ex-command-key ":"
@@ -347,7 +372,7 @@ It should only modify the values of Spacemacs settings."
    ;; `top-center', `bottom-center', `top-left-corner', `top-right-corner',
    ;; `top-right-corner', `bottom-left-corner' or `bottom-right-corner'
    ;; (default 'bottom)
-   dotspacemacs-which-key-position 'bottom
+   dotspacemacs-which-key-position '(posframe . bottom-center)
 
    ;; Control where `switch-to-buffer' displays the buffer. If nil,
    ;; `switch-to-buffer' displays the buffer in the current window even if
@@ -364,7 +389,7 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil to boost the loading time. (default t)
-   dotspacemacs-loading-progress-bar t
+   dotspacemacs-loading-progress-bar nil
 
    ;; If non-nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
@@ -528,7 +553,7 @@ It should only modify the values of Spacemacs settings."
    ;; which major modes have whitespace cleanup enabled or disabled
    ;; by default.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup `trailing
 
    ;; If non-nil activate `clean-aindent-mode' which tries to correct
    ;; virtual indentation of simple modes. This can interfere with mode specific
